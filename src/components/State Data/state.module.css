@@ -4,8 +4,8 @@
     height: 295px;
     border-radius: 6px !important;
     background: #ffffff;
-    /* box-shadow:  14px 14px 28px #808080 , 
-                 -14px -14px 28px #ffffff !important; */
+    box-shadow:  14px 14px 28px #808080 , 
+                 -14px -14px 28px #ffffff !important;
 }
 .text{
     margin-bottom: 10px !important;
