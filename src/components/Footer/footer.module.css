@@ -1,0 +1,16 @@
+.tagline{
+    display: flex;
+    justify-content: center;
+}
+
+.heart{
+    color: #ff0000;
+}
+
+
+.icons{
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    padding: 5px;
+}

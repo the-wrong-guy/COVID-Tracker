@@ -1,0 +1,30 @@
+.interactive{
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+   
+}
+
+.title{
+    text-align: center;
+    display: block;
+}
+
+.iframe{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    height: 300px;
+    margin-bottom: 60px;
+    border-radius: 7px;
+    box-shadow: none;
+    outline: none;
+}
+
+@media only screen and (max-width: 600px){
+    .iframe{
+        margin-right:  20px;
+        margin-left: 20px;
+        height: 230px;
+    }
+}

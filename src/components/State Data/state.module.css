@@ -1,0 +1,82 @@
+.paper2{
+    padding: 20px;
+    width: 410px;
+    height: 295px;
+    border-radius: 6px !important;
+    background: #ffffff;
+    /* box-shadow:  14px 14px 28px #808080 , 
+                 -14px -14px 28px #ffffff !important; */
+}
+.text{
+    margin-bottom: 10px !important;
+}
+
+.form{
+    width: 200px;
+}
+
+.countryLogo{
+    display: flex !important;
+    align-self: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom:10px;
+}
+
+.image{
+    background: url('../../images/doctor-woman.svg');
+    background-repeat: no-repeat;
+    background-size: 80px;
+    background-position-x: 3.7rem;
+    background-position-y: 2em;
+}
+
+
+.container{
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.infected{
+    color: rgb(40, 4, 240);
+    /* border-bottom: 3px solid rgba(255, 166, 0, 0.993); */
+}
+.recovered{
+    color: rgb(9, 245, 21);
+    /* border-bottom: 3px solid rgb(0, 252, 97); */
+}
+.deaths{
+    color: rgb(248, 0, 0);
+    /* border-bottom: 3px solid rgba(255, 0, 0, 0.932); */
+}
+
+.active{
+    color: rgb(250, 138, 10);
+}
+
+.infectedM{
+    border-bottom: 8px solid rgba(255, 166, 0, 0.993);
+}
+.recoveredM{
+    border-bottom: 8px solid rgb(0, 252, 97);
+}
+.deathsM{
+    border-bottom: 8px solid rgba(131, 109, 109, 0.932);
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width:600px){
+    .paper2{
+        width: 360px !important;
+        height: 285px;
+    }
+    .image{
+        background-size: 78px;
+        background-position-y: 1.2rem;
+    }
+}

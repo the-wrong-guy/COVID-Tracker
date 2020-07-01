@@ -1,0 +1,12 @@
+.skeleton{
+    margin-bottom: 5px !important;
+}
+
+.MuiSkeleton-text {
+    margin-bottom: 5px;
+}
+
+.alignRight{
+    display: flex;
+    justify-content: right;
+}
