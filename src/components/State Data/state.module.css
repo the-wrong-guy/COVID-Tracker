@@ -72,7 +72,7 @@
 
 @media (max-width:600px){
     .paper2{
-        width: 360px !important;
+        width: 90vw;
         height: 285px;
     }
     .image{

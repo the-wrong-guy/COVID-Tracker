@@ -23,8 +23,7 @@
 
 @media only screen and (max-width: 600px){
     .iframe{
-        margin-right:  20px;
-        margin-left: 20px;
+        width: 90vw;
         height: 230px;
     }
 }

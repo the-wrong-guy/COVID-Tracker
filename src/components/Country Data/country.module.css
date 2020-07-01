@@ -60,7 +60,7 @@
 @media only screen and (max-width: 600px){
     .paper2{
         height: 230px;
-        
+        width: 90vw;
     }
     .image{
         background-size: 110px;
