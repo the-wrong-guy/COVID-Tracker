@@ -13,13 +13,12 @@ let hideSpinner = () => {
     return(
         <div>
         <h5 className={styles.title}>Global Corona Map</h5>
-        <div className={styles.interactive} >
-
         {loading ? (
           <div className={styles.loader}>
           <Spinner name="ball-clip-rotate-multiple" color="green"/>
           </div>
         ) : null}
+        <div className={styles.interactive} >
 
         <iframe className={styles.iframe}
         title='corona map'

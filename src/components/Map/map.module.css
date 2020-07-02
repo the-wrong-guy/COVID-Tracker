@@ -22,10 +22,12 @@
 }
 
 .loader{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    margin-top: 5px;
+  /* display: block;
+  margin-left: 50%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
 }
 
 
