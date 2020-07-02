@@ -3,7 +3,6 @@ import './App.css';
 import {CssBaseline} from '@material-ui/core';
 import CountryCard from './components/Country Data/country';
 import StateCard from './components/State Data/state'
-import  BackToTop from './components/Menu Bar/menu'
 import Chart from './components/Country Chart/countryLineChart'
 import ComboBox from './components/State Data/options'
 import Footer from './components/Footer/footer'
@@ -36,7 +35,6 @@ handleStateChange = async(states) => {
     return (
       <div className="App">
         <CssBaseline/>
-        
         <CountryCard/>
         <Chart/>
         <ComboBox handleStateChange={this.handleStateChange}/>

@@ -21,6 +21,14 @@
     outline: none;
 }
 
+.loader{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+
 @media only screen and (max-width: 600px){
     .iframe{
         width: 90vw;
