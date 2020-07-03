@@ -2,7 +2,9 @@ import React from 'react';
 import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,IconButton,Container } from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import styles from './menu.module.css'
+import './menuTheme.css'
 import App from '../../App'
+import cx from 'classnames'
 
 
 const useStyles = makeStyles(theme => ({
@@ -51,8 +53,39 @@ function ScrollTop(props) {
 // };
 
 export default function BackToTop(props) {
+
+  const [darkMode, setDarkMode] = React.useState(getInitialMode());
+  React.useEffect(() => {
+    localStorage.setItem("dark", JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  function getInitialMode() {
+    const isReturningUser = "dark" in localStorage;
+    const savedMode = JSON.parse(localStorage.getItem("dark"));
+    const userPrefersDark = getPrefColorScheme();
+    // if mode was saved --> dark / light
+    if (isReturningUser) {
+      return savedMode;
+      // if preferred color scheme is dark --> dark
+    } else if (userPrefersDark) {
+      return true;
+      // otherwise --> light
+    } else {
+      return false;
+    }
+    // return savedMode || false;
+  }
+
+  function getPrefColorScheme() {
+    if (!window.matchMedia) return;
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+
+
   return (
-    <React.Fragment>
+    <div className={darkMode ? "dark-mode" : "light-mode" }>
       <CssBaseline />
       <AppBar className={styles.AppBar}>
         <Toolbar>
@@ -60,6 +93,20 @@ export default function BackToTop(props) {
           <Typography align='center' variant="h5">
             COVID-19 Información
           </Typography>
+          <div className="toggle-container">
+          <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
+          <span className="toggle">
+            <input
+              checked={darkMode}
+              onChange={() => setDarkMode(prevMode => !prevMode)}
+              id="checkbox"
+              className="checkbox"
+              type="checkbox"
+            />
+            <label htmlFor="checkbox" />
+          </span>
+          <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
+          </div>
           </Container>
         </Toolbar>
       </AppBar>
@@ -72,6 +119,6 @@ export default function BackToTop(props) {
           <KeyboardArrowUpIcon />
         </Fab>
       </ScrollTop>
-    </React.Fragment>
+    </div>
   );
 }
