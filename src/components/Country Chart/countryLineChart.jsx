@@ -67,7 +67,7 @@ function Chart() {
 
      return(
          <div className={styles.container}>
-            <Card elevation={10} className={styles.Card}>
+            <Card elevation={24} className={styles.Card}>
                     {lineChart}
           </Card>
          </div>

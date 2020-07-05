@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {Typography} from '@material-ui/core'
 import styles from './map.module.css'
 var Spinner = require('react-spinkit')
 
@@ -12,10 +13,10 @@ let hideSpinner = () => {
 
     return(
         <div>
-        <h5 className={styles.title}>Global Corona Map</h5>
+        <Typography className={styles.title} align="center" varient="h5">Global Corona Map</Typography>
         {loading ? (
           <div className={styles.loader}>
-          <Spinner name="ball-clip-rotate-multiple" color="green"/>
+          <Spinner name="ball-clip-rotate-multiple" color="red"/>
           </div>
         ) : null}
         <div className={styles.interactive} >

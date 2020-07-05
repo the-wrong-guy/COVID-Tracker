@@ -1,29 +1,11 @@
 import React from 'react';
-import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,Container } from '@material-ui/core'
+import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,IconButton,Container } from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import styles from './menu.module.css'
+import './menuTheme.css'
 import App from '../../App'
 import cx from 'classnames'
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles'
 
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#fff',
-    },
-    secondary: {
-      main: '#333333',
-    },
-  },
-typography: {
-  h5: {
-    fontSize: 20,
-    fontWeight : 800,
-  }
-}
-});
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -72,21 +54,64 @@ function ScrollTop(props) {
 
 export default function BackToTop(props) {
 
+  const [darkMode, setDarkMode] = React.useState(getInitialMode());
+  React.useEffect(() => {
+    localStorage.setItem("dark", JSON.stringify(darkMode));
+  }, [darkMode]);
+
+  function getInitialMode() {
+    const isReturningUser = "dark" in localStorage;
+    const savedMode = JSON.parse(localStorage.getItem("dark"));
+    const userPrefersDark = getPrefColorScheme();
+    // if mode was saved --> dark / light
+    if (isReturningUser) {
+      return savedMode;
+      // if preferred color scheme is dark --> dark
+    } else if (userPrefersDark) {
+      return true;
+      // otherwise --> light
+    } else {
+      return false;
+    }
+    // return savedMode || false;
+  }
+
+  function getPrefColorScheme() {
+    if (!window.matchMedia) return;
+
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
+
+
+
   return (
-    <div>
+    <div className={darkMode ? "dark-mode" : "light-mode" }>
       <CssBaseline />
-      <AppBar color="secondary" className={styles.AppBar}>
+      <AppBar className={styles.AppBar}>
         <Toolbar>
           <Container className={styles.toolBarContainer}>
-          <div>
-          <Typography  className={styles.title} align="center" variant="h5">
+          <div className={styles.title}>
+          <Typography align="center" variant="h5">
               COVID-19 Información
           </Typography>
+          </div>
+          <div className="toggle-container">
+          <span style={{ color: darkMode ? "grey" : "yellow" }}>☀︎</span>
+          <span className="toggle">
+            <input
+              checked={darkMode}
+              onChange={() => setDarkMode(prevMode => !prevMode)}
+              id="checkbox"
+              className="checkbox"
+              type="checkbox"
+            />
+            <label htmlFor="checkbox" />
+          </span>
+          <span style={{ color: darkMode ? "slateblue" : "grey" }}>☾</span>
           </div>
           </Container>
         </Toolbar>
       </AppBar>
-    
       <Toolbar id="back-to-top-anchor" />
       <Container>
        <App/>

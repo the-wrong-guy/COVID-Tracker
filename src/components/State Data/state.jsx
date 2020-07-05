@@ -46,7 +46,7 @@ import StateSkeleton from '../skeletons/StateSkeleton'
                 <Grid item>
                 
                  
-                <Paper elevation={10} className={cx(styles.paper2,styles.image)}>
+                <Paper elevation={24} className={cx(styles.paper2,styles.image)}>
                     <Typography className={cx(styles.infected)} align="right"  varient="caption">Infected</Typography>
                     <Typography className={cx(styles.text)} align="right" varient="h6"><CountUp  start ={0} end={confirmed || 100} duration = {3.5} separator = ","/></Typography>
 

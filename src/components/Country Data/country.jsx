@@ -41,9 +41,8 @@ export default class CountryCard extends React.Component{
                 <Grid item>
                   <div className={styles.countryLogo}>
                     <img src="https://img.icons8.com/color/48/000000/india-circular.png" alt='indiaflag'/>
-                    <Typography varient="Subtitle2" color="primary">INDIA</Typography>
                   </div>
-                <Paper elevation={10} className={cx(styles.paper2,styles.image)}>
+                <Paper elevation={24} className={cx(styles.paper2,styles.image)}>
                     <Typography className={cx(styles.infected)}  varient="caption">Infected</Typography>
                     <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.confirmed} duration = {3.5} separator = ","/></Typography>
                     <Typography className={cx(styles.deaths)}  varient="caption">Deceased</Typography>
