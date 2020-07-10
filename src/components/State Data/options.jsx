@@ -43,7 +43,7 @@ const ComboBox = ({handleStateChange}) =>{
     <FormControl className={styles.formControl} variant="outlined">
         <InputLabel color="secondary" shrink={true} focused={true}>States</InputLabel>
         <Select native
-          // defaultValue="Assam"
+          color="secondary"
           value={value}
           onChange={inputEvent}
           label="States"

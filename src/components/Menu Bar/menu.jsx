@@ -73,7 +73,7 @@ export default function BackToTop(props) {
         <Toolbar>
           <Container className={styles.toolBarContainer}>
           <div style={{ display: "flex", justifyContent: "center",alignItems:"center" }}>
-          <img style={{}} src={CoronaPic} alt="coronaLogo"/>
+          <img style={{marginRight:"5"}} src={CoronaPic} alt="coronaLogo"/>
           <Typography style={{fontWeight:"700"}}  align="center" variant="h5">
             COVID <span style={{color:"red"}}>Tracker</span>
           </Typography>
