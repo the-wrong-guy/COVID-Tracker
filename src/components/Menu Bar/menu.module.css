@@ -1,21 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
-.title{
-    font-family: 'Passion One', cursive !important;
-    font-size: 35px !important;
-    color: rgb(255, 255, 255);
-    /* text-align: center; */
-    /* font-weight: 700 !important; */
-}
 
 .AppBar{
-    background-image: url('../../images/icons8-coronavirus-96.png'),url('../../images/icons8-coronavirus-50.png');
+    /* background-image: url('../../images/icons8-coronavirus-96.png'),url('../../images/icons8-coronavirus-50.png');
     background-repeat: no-repeat;
     background-size: contain ,10%;
-    background-position-x: 62%,30%;
+    background-position-x: 62%,30%; */
 }
 
 
 .toolBarContainer{
-    display: flex;
-    align-items: center;
+    width: 100%;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between;
 }

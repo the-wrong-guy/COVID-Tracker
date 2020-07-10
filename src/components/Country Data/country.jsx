@@ -4,7 +4,17 @@ import CountUp from 'react-countup';
 import styles from './country.module.css'
 import cx from 'classnames'
 import CountrySkeleton from '../skeletons/CountrySkeleton'
+import {
+  createMuiTheme,
+  makeStyles,
+  ThemeProvider
+} from "@material-ui/core/styles";
 
+// const theme = createMuiTheme({
+//   palette: {
+//     type: "dark"
+//   }
+// });
 export default class CountryCard extends React.Component{
 
         state = {
@@ -28,6 +38,7 @@ export default class CountryCard extends React.Component{
 
         render(){
           return (
+            <ThemeProvider >
             <div className={styles.container}>
             { this.state.loading || !this.state.confirmed || !this.state.deaths || !this.state.recovered  ? 
               (<React.Fragment>
@@ -39,9 +50,7 @@ export default class CountryCard extends React.Component{
               (<React.Fragment>
               <Grid container justify="center">
                 <Grid item>
-                  <div className={styles.countryLogo}>
-                    <img src="https://img.icons8.com/color/48/000000/india-circular.png" alt='indiaflag'/>
-                  </div>
+                 
                 <Paper elevation={24} className={cx(styles.paper2,styles.image)}>
                     <Typography className={cx(styles.infected)}  varient="caption">Infected</Typography>
                     <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.confirmed} duration = {3.5} separator = ","/></Typography>
@@ -57,8 +66,11 @@ export default class CountryCard extends React.Component{
                 </Grid>
                 </Grid>
             </React.Fragment> )
+            
           }
-          </div> 
+          </div>
+          </ThemeProvider>
+
           );
         }
 }

@@ -23,7 +23,7 @@ const ComboBox = ({handleStateChange}) =>{
   const styles = useStyles();
 
   const [fetchedStates,setFetchedStates] = useState([]);
-  const [ value , setValue] = useState('')
+  const [ value , setValue] = useState('Assam')
     useEffect(()=>{
         const fetchAPI = async() => {
             setFetchedStates(await options());
@@ -41,7 +41,7 @@ const ComboBox = ({handleStateChange}) =>{
     return (
     <div className={styles2.main}>
     <FormControl className={styles.formControl} variant="outlined">
-        <InputLabel>States</InputLabel>
+        <InputLabel color="secondary" shrink={true} focused={true}>States</InputLabel>
         <Select native
           // defaultValue="Assam"
           value={value}

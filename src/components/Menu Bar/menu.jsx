@@ -1,29 +1,13 @@
-import React from 'react';
-import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,Container } from '@material-ui/core'
+import React,{useState,useEffect} from 'react';
+import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,Container, IconButton} from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import styles from './menu.module.css'
 import App from '../../App'
 import cx from 'classnames'
-import { createMuiTheme } from '@material-ui/core/styles';
-import { ThemeProvider } from '@material-ui/styles'
+import { Brightness2, Brightness7 } from "@material-ui/icons";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import CoronaPic from '../../images/icons8-coronavirus-48.png';
 
-
-const theme = createMuiTheme({
-  palette: {
-    primary: {
-      main: '#fff',
-    },
-    secondary: {
-      main: '#333333',
-    },
-  },
-typography: {
-  h5: {
-    fontSize: 20,
-    fontWeight : 800,
-  }
-}
-});
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -61,32 +45,53 @@ function ScrollTop(props) {
   );
 }
 
-// ScrollTop.propTypes = {
-//   children: PropTypes.element.isRequired,
-//   /**
-//    * Injected by the documentation to work in an iframe.
-//    * You won't need it on your project.
-//    */
-//   window: PropTypes.func
-// };
-
 export default function BackToTop(props) {
+  const [themeMode, SetThemeMode] = useState("light");
+  const theme = createMuiTheme({
+    palette: {
+      type: themeMode,
+      primary: {
+        main: themeMode === "light" ? "#fff" : "#333333"
+      }
+    }
+  });
 
+  const handleLightMode = () => {
+    document.querySelector("body").style.backgroundColor = "#fff";
+    SetThemeMode("light");
+  };
+
+  const handleDarkMode = () => {
+    document.querySelector("body").style.backgroundColor = "#333333";
+    SetThemeMode("dark");
+  };
   return (
+    <ThemeProvider theme={theme}>
     <div>
       <CssBaseline />
-      <AppBar color="secondary" className={styles.AppBar}>
+      <AppBar color="primary">
         <Toolbar>
           <Container className={styles.toolBarContainer}>
-          <div>
-          <Typography  className={styles.title} align="center" variant="h5">
-              COVID-19 Información
+          <div style={{ display: "flex", justifyContent: "center",alignItems:"center" }}>
+          <img style={{}} src={CoronaPic} alt="coronaLogo"/>
+          <Typography style={{fontWeight:"700"}}  align="center" variant="h5">
+            COVID <span style={{color:"red"}}>Tracker</span>
           </Typography>
+          </div>
+          <div style={{marginRight:"0"}}>
+          {themeMode === "light" ? (
+            <IconButton style={{ color: "#000" }} onClick={handleDarkMode}>
+              <Brightness2 />
+            </IconButton>
+          ) : (
+            <IconButton style={{ color: "yellow" }} onClick={handleLightMode}>
+              <Brightness7 />
+            </IconButton>
+          )}
           </div>
           </Container>
         </Toolbar>
       </AppBar>
-    
       <Toolbar id="back-to-top-anchor" />
       <Container>
        <App/>
@@ -97,5 +102,6 @@ export default function BackToTop(props) {
         </Fab>
       </ScrollTop>
     </div>
+    </ThemeProvider>
   );
 }

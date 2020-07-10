@@ -13,14 +13,6 @@
     margin-bottom: 10px !important;
 }
 
-.countryLogo{
-    display: flex !important;
-    align-self: center !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-bottom:10px;
-}
-
 .image{
     background: url('../../images/doctor-man.svg');
     background-repeat: no-repeat;
