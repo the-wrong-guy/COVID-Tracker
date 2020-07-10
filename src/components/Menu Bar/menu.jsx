@@ -3,7 +3,7 @@ import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyl
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 import styles from './menu.module.css'
 import App from '../../App'
-import cx from 'classnames'
+import MenuIcon from '@material-ui/icons/Menu';
 import { Brightness2, Brightness7 } from "@material-ui/icons";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import CoronaPic from '../../images/icons8-coronavirus-48.png';
@@ -88,6 +88,9 @@ export default function BackToTop(props) {
               <Brightness7 />
             </IconButton>
           )}
+          <IconButton>
+            <MenuIcon/>
+          </IconButton>
           </div>
           </Container>
         </Toolbar>
