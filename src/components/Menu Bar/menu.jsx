@@ -72,13 +72,13 @@ export default function BackToTop(props) {
       <AppBar color="primary">
         <Toolbar>
           <Container className={styles.toolBarContainer}>
-          <div style={{ display: "flex", justifyContent: "center",alignItems:"center" }}>
+          <div style={{ display: "flex",alignItems:"center" }}>
           <img style={{marginRight:"5"}} src={CoronaPic} alt="coronaLogo"/>
           <Typography style={{fontWeight:"700"}}  align="center" variant="h5">
             COVID <span style={{color:"red"}}>Tracker</span>
           </Typography>
           </div>
-          <div style={{marginRight:"0"}}>
+          <div>
           {themeMode === "light" ? (
             <IconButton style={{ color: "#000" }} onClick={handleDarkMode}>
               <Brightness2 />
