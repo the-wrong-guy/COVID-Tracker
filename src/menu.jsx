@@ -1,13 +1,20 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,Container, IconButton} from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import { useHistory,withRouter,Link,Router } from 'react-router-dom';
+import {
+  Drawer,
+  ListItem,
+  List,
+  ListItemIcon,
+  ListItemText,
+} from "@material-ui/core";
 import styles from './menu.module.css'
-import App from '../../App'
-import MenuIcon from '@material-ui/icons/Menu';
+import App from './App'
 import { Brightness2, Brightness7 } from "@material-ui/icons";
+import {ArrowBackIos as ArrowBackIosIcon,Menu as MenuIcon, Public as PublicIcon,LocalHospital as LocalHospitalIcon,HelpOutline as HelpOutlineIcon,Home as HomeIcon} from "@material-ui/icons"
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
-import CoronaPic from '../../images/icons8-coronavirus-48.png';
-
+import CoronaPic from './Main Components/Home/images/icons8-coronavirus-48.png'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,7 +52,8 @@ function ScrollTop(props) {
   );
 }
 
-export default function BackToTop(props) {
+ function BackToTop(props) {
+  const [toggle, setToggle] = useState(false);
   const [themeMode, SetThemeMode] = useState("light");
   const theme = createMuiTheme({
     palette: {
@@ -55,6 +63,33 @@ export default function BackToTop(props) {
       }
     }
   });
+
+  const history = useHistory();
+  const itemsList = [
+    {
+      text: "Home",
+      icon: <HomeIcon/>,
+      onClick: () => history.push("/")
+    },
+    {
+      text: "What is COVID-19?",
+      icon: <HelpOutlineIcon />,
+      // onClick: () => history.push("/what_is_covid")
+    },
+    {
+      text: "Prevention",
+      icon: <LocalHospitalIcon />,
+      // onClick: () => history.push("/prevention")
+    },
+    {
+      text: "Global anlytics",
+      icon: <PublicIcon />,
+      onClick: () => history.push("/global_analytics")
+    }
+  ];
+
+
+
 
   const handleLightMode = () => {
     document.querySelector("body").style.backgroundColor = "#fff";
@@ -88,11 +123,36 @@ export default function BackToTop(props) {
               <Brightness7 />
             </IconButton>
           )}
-          <IconButton>
+          <IconButton onClick={() => {
+            setToggle(!toggle);
+          }} >
             <MenuIcon/>
           </IconButton>
           </div>
           </Container>
+          <Drawer style={{width:"300px"}} open={toggle}>
+              <List style={{display:"flex",justifyContent:"flex-end",marginRight:"5px"}}>
+                <IconButton
+                  onClick={() => {
+                    setToggle(!toggle);
+                  }}
+                  
+                >
+                  <ArrowBackIosIcon/>
+                </IconButton>
+            </List>
+            <List>
+            {itemsList.map((item, index) => {
+              const { text, icon, onClick } = item;
+              return (
+                <ListItem button key={text} onClick={onClick}>
+                  {icon && <ListItemIcon>{icon}</ListItemIcon>}
+                  <ListItemText primary={text} />
+                </ListItem>
+              );
+            })}
+          </List>
+          </Drawer>
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
@@ -108,3 +168,5 @@ export default function BackToTop(props) {
     </ThemeProvider>
   );
 }
+
+export default BackToTop

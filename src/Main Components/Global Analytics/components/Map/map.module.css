@@ -7,15 +7,11 @@
 
 .title{
     padding: 5px;
-    margin-bottom: 20px !important;
 }
 
 .iframe{
-    display: flex;
-    justify-content: center;
-    width: 600px;
-    height: 300px;
-    margin-bottom: 60px;
+    width: 37vw;
+    height: 45vh;
     border-radius: 7px;
     border-style: solid;
     box-shadow: none;

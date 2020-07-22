@@ -44,7 +44,6 @@ import StateSkeleton from '../skeletons/StateSkeleton'
               (<React.Fragment>
               <Grid container justify="center">
                 <Grid item>
-                
                  
                 <Paper elevation={24} className={cx(styles.paper2,styles.image)}>
                     <Typography className={cx(styles.infected)} align="right"  varient="caption">Infected</Typography>

@@ -50,7 +50,7 @@ export default class CountryCard extends React.Component{
               (<React.Fragment>
               <Grid container justify="center">
                 <Grid item>
-                 
+                <Typography style={{fontWeight : "550",margin:"20px 0",fontSize:"20px"}} align="center">Country Data</Typography>
                 <Paper elevation={24} className={cx(styles.paper2,styles.image)}>
                     <Typography className={cx(styles.infected)}  varient="caption">Infected</Typography>
                     <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.confirmed} duration = {3.5} separator = ","/></Typography>

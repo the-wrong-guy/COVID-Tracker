@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .card {
+    margin: 32px 0;
+    width: 40vw !important;
+    height: 45vh;
+    padding: 2%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .card {
+      width: 90vw !important;
+      height: 45vw !important;
+      padding: 0;
+    }
+  }
+  

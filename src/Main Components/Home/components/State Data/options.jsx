@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { FormControl , makeStyles, InputLabel,Select} from '@material-ui/core';
+import { FormControl , makeStyles, InputLabel,Select,Typography} from '@material-ui/core';
 import {options} from '../../api/api'
 import styles2 from './state.module.css' 
 
@@ -40,6 +40,7 @@ const ComboBox = ({handleStateChange}) =>{
 
     return (
     <div className={styles2.main}>
+    
     <FormControl className={styles.formControl} variant="outlined">
         <InputLabel color="secondary" shrink={true} focused={true}>States</InputLabel>
         <Select native

@@ -1,7 +1,7 @@
 
 .paper2{
     padding: 20px;
-    width: 360px;
+    width: 410px;
     height: 240px;
     border-radius: 6px !important;
     /* background-color: #333333 !important; */
@@ -18,7 +18,7 @@
     background-repeat: no-repeat;
     background-size: 120px;
     background-position-y: 1rem;
-    background-position-x: 14em;
+    background-position-x: 90%;
 }
 
 .container{

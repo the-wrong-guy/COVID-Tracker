@@ -29,7 +29,7 @@ function Chart() {
                     backgroundColor:'rgba(51,51,255, 0.6)',
                     label : 'Infected',
                     fill : true,
-                    pointRadius : 1
+                    pointRadius : 1,
                 },{
                     data : dailyData.map(({deaths}) => deaths),
                     borderColor : 'red',
@@ -48,6 +48,12 @@ function Chart() {
                 
             }}
             options = {{
+                legend: {
+                    position: 'top',
+                    labels: {
+                       usePointStyle: true
+                    }
+                 },
                 scales: {
                     xAxes: [{
                         gridLines: {

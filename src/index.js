@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import BackToTop from '../src/components/Menu Bar/menu'
+import BackToTop from './menu'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
