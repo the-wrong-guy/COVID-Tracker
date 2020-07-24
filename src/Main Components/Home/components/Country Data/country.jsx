@@ -1,5 +1,5 @@
 import React from "react";
-import { CardContent,Card,Grid,Box, Paper, Typography,IconButton} from "@material-ui/core";
+import { Grid, Paper, Typography} from "@material-ui/core";
 import CountUp from 'react-countup';
 import styles from './country.module.css'
 import cx from 'classnames'
@@ -54,8 +54,8 @@ export default class CountryCard extends React.Component{
               </React.Fragment>) : 
               
               (<React.Fragment>
-              <Typography style={{fontWeight : "550",margin:"20px 0",fontSize:"20px"}} align="left">Country Data</Typography>
-              <Grid container className={styles.container} justify="space-between">
+              <Typography style={{fontWeight : "550",marginBottom:"30px",fontSize:"20px"}} align="center">Country Data</Typography>
+              <Grid container className={styles.container} justify="space-evenly">
                 <Grid item>
                 <Paper elevation={24} className={cx(styles.paper2,styles.image)}>
                     <Typography className={cx(styles.infected)}  varient="caption">Confimred</Typography>

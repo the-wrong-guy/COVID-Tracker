@@ -1,11 +1,11 @@
 
 .paper2{
     padding: 20px;
-    width: 410px;
+    width: 500px;
     height: 290px;
     border-radius: 6px !important;
+    margin-bottom: 20px;
     /* background-color: #333333 !important; */
-
     /* box-shadow:  14px 14px 28px #808080 , 
                  -14px -14px 28px #ffffff !important;  */
 }

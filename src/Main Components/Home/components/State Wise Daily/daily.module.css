@@ -1,0 +1,37 @@
+.container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 15px;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.paper{
+    width: 40vw;
+    /* height: 300px; */
+    height: auto;
+    padding: 5px;
+}
+
+@media screen and (max-width:800px){
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        height: 100vh;
+    }
+    .paper{
+        width: 90vw;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:600px){
+    .container{
+        display: none;
+    }
+    .paper{
+        display: none;
+    }
+}

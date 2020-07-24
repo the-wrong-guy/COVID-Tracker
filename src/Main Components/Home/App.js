@@ -3,11 +3,10 @@ import './App.css';
 import {CssBaseline,Typography} from '@material-ui/core';
 import CountryCard from './components/Country Data/country';
 import StateCard from './components/State Data/state'
-import Chart from './components/Country Chart/countryLineChart'
 import ComboBox from './components/State Data/options'
 import Footer from './components/Footer/footer'
 import Daily from './components/State Wise Daily/daily'
-import Test from './components/Test per 1000/test'
+import DoughnutChart from './components/Doughnut Chart/doughnut'
 
 
 import { StateData } from './api/api'
@@ -41,9 +40,8 @@ handleStateChange = async(states) => {
         <Typography style={{fontWeight : "550",marginTop:"50px",fontSize:"20px"}} align="center">State Wise Data</Typography>
         <ComboBox handleStateChange={this.handleStateChange}/>
         <StateCard data={data} states={states}/>
-        <Chart/>
         <Daily/>
-        <Test/>
+        <DoughnutChart/>
         <Footer/>
       </div>
     );

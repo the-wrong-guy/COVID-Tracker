@@ -1,0 +1,25 @@
+.container{
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+/* 
+.paper{
+    width: 80vw;
+    height:auto;
+} */
+
+@media screen and (max-width:600px){
+    .paper{
+        display: flex;
+        justify-content: center;
+        width: 90vw;
+    }
+}
+
+@media screen and (min-width:600px){
+    .container{
+        display: none;
+    }
+}

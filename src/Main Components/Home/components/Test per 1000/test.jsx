@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Bar} from 'react-chartjs-2';
 import Axios from 'axios';
 import {Paper} from '@material-ui/core'
-import styles from '../Country Chart/countryLineChart.module.css'
+import styles from '../State Wise Daily/daily.module.css'
 
 class Test extends Component {
     constructor(props) {
@@ -37,14 +37,14 @@ class Test extends Component {
             var count=0;
             for(var j=0;j<tested.length;j++)
             {
-                if(tested[j].state==stdata[i].state)
+                if(tested[j].state===stdata[i].state)
                 {
-                    if(tested[j].totaltested!='' && tested[j].testsperthousand!='' && tested[j].testpositivityrate!='')
+                    if(tested[j].totaltested!=='' && tested[j].testsperthousand!=='' && tested[j].testpositivityrate!=='')
                     {
                         index1=j
                         continue
                     }
-                    if(tested[j].totaltested=='' || tested[j].testsperthousand=='' || tested[j].testpositivityrate==''){
+                    if(tested[j].totaltested==='' || tested[j].testsperthousand==='' || tested[j].testpositivityrate===''){
                         count++;
                         index=j;
                         break;
@@ -52,7 +52,7 @@ class Test extends Component {
                     
                 }
             }
-            if(count==1)
+            if(count===1)
             {
                         stdata[i].totaltested=tested[index-1].totaltested
                         
@@ -62,7 +62,7 @@ class Test extends Component {
                         
                         
             }
-            if(count==0)
+            if(count===0)
             {
                 stdata[i].totaltested=tested[index1].totaltested
                         
@@ -78,7 +78,7 @@ class Test extends Component {
         var info1=[]
         var info2=[]
         var info3=[]
-        for(var i=1;i<stdata.length;i++)
+        for(let i=1;i<stdata.length;i++)
         {
          
             states[i-1]=stdata[i].state
@@ -163,8 +163,8 @@ class Test extends Component {
     
     render() {
         return (
-            <div className={styles.container}>
-                <Paper elevation={24} className={styles.Card}>
+            <div>
+                <Paper elevation={24} className={styles.paper}>
                     <Bar
                     data={this.state.chartData}
                     options={{
@@ -176,7 +176,19 @@ class Test extends Component {
                     legend:{
                     display:this.props.displayLegend,
                     position:this.props.legendPosition
-                    }
+                    },
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                display:false
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display:true
+                            }   
+                        }]
+                    },
                     }}
                     />
                 </Paper>

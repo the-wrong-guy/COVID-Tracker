@@ -62,7 +62,7 @@ function Chart() {
                     }],
                     yAxes: [{
                         gridLines: {
-                            display:false
+                            display:true
                         }   
                     }]
                 },
