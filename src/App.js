@@ -1,6 +1,6 @@
 import React from "react";
-// import Prevention from "./components/prevention/prevention";
-// import What from "./components/what_is_covid/about";
+import Prevention from "./Main Components/Prevention/prevention";
+import What from "./Main Components/What is COVID/what";
 import Home from "./Main Components/Home/App";
 import Global from "./Main Components/Global Analytics/app";
 // import Error from "./components/error";
@@ -16,7 +16,17 @@ export default function App() {
           <Route
             exact
             path="/global_analytics"
-           component={Global}
+            component={Global}
+          />
+          <Route
+            exact
+            path="/prevention"
+            component={Prevention }
+          />
+          <Route
+            exact
+            path="/what-is-covid"
+            component={What}
           />
         </Switch>
       </BrowserRouter>

@@ -13,7 +13,6 @@ let hideSpinner = () => {
 
     return(
         <div>
-        <Typography className={styles.title} align="center" varient="h5">Global Corona Map</Typography>
         {loading ? (
           <div className={styles.loader}>
           <Spinner name="ball-clip-rotate-multiple" color="red"/>

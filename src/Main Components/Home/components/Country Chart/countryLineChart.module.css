@@ -1,20 +1,17 @@
  .Card{
    display: flex !important;
    justify-content: center !important;
-   width: 70%;
-   padding-top: 10px;
-   margin-bottom: 20px;
-}
-
-.container{
-    margin:20px 0 ;
-   display: flex !important;
-   justify-content: center!important;
+   width: 40vw;
+   height: 290px;
+   padding: 10px;
+   /* margin-bottom: 20px; */
 }
 
 @media only screen and (max-width: 600px){
     .Card{
         width: 90vw;
         height: 195px;
+        padding: 0;
+        margin-top: 20px;
     }
 }

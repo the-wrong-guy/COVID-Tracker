@@ -4,11 +4,12 @@ import CountUp from 'react-countup';
 import styles from './country.module.css'
 import cx from 'classnames'
 import CountrySkeleton from '../skeletons/CountrySkeleton'
-import {
-  createMuiTheme,
-  makeStyles,
-  ThemeProvider
-} from "@material-ui/core/styles";
+import Chart from '../Country Chart/countryLineChart'
+// import {
+//   createMuiTheme,
+//   makeStyles,
+//   ThemeProvider
+// } from "@material-ui/core/styles";
 
 // const theme = createMuiTheme({
 //   palette: {
@@ -22,6 +23,7 @@ export default class CountryCard extends React.Component{
           confirmed : [],
           deaths : [],
           recovered : [],
+          date : '',
           curTime : new Date().toLocaleString()
         };
 
@@ -30,15 +32,19 @@ export default class CountryCard extends React.Component{
           const response = await fetch(url);
           const data = await response.json();
           const pop = data.cases_time_series.pop()
-          this.setState({confirmed:pop.totalconfirmed, deaths:pop.totaldeceased, recovered:pop.totalrecovered, loading:false}) ;
+          this.setState({confirmed:pop.totalconfirmed, deaths:pop.totaldeceased, recovered:pop.totalrecovered,date : pop.date, loading:false}) ;
           console.log(data);
         }
 
         // spacing deafult value is 8px , so the 3*8=24px width column
 
         render(){
+
+          const active = this.state.confirmed - this.state.recovered;
+          console.log(active) 
+
           return (
-            <ThemeProvider >
+     
             <div className={styles.container}>
             { this.state.loading || !this.state.confirmed || !this.state.deaths || !this.state.recovered  ? 
               (<React.Fragment>
@@ -48,28 +54,30 @@ export default class CountryCard extends React.Component{
               </React.Fragment>) : 
               
               (<React.Fragment>
-              <Grid container justify="center">
+              <Typography style={{fontWeight : "550",margin:"20px 0",fontSize:"20px"}} align="left">Country Data</Typography>
+              <Grid container className={styles.container} justify="space-between">
                 <Grid item>
-                <Typography style={{fontWeight : "550",margin:"20px 0",fontSize:"20px"}} align="center">Country Data</Typography>
                 <Paper elevation={24} className={cx(styles.paper2,styles.image)}>
-                    <Typography className={cx(styles.infected)}  varient="caption">Infected</Typography>
+                    <Typography className={cx(styles.infected)}  varient="caption">Confimred</Typography>
                     <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.confirmed} duration = {3.5} separator = ","/></Typography>
-                    <Typography className={cx(styles.deaths)}  varient="caption">Deceased</Typography>
-                    <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.deaths} duration = {3.5} separator = ","/></Typography>
                     <Typography className={cx(styles.recovered)}  varient="caption">Recovered</Typography>
                     <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.recovered} duration = {3.5} separator = ","/></Typography>
-                    <Typography color="textSecondary" varient="overline">As on {this.state.curTime}</Typography>
+                    <Typography className={cx(styles.active)}  varient="caption">Active</Typography>
+                    <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={active} duration = {3.5} separator = ","/></Typography>
+                    <Typography className={cx(styles.deaths)}  varient="caption">Deceased</Typography>
+                    <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.deaths} duration = {3.5} separator = ","/></Typography>
+                    <Typography color="textSecondary" varient="overline">As on {this.state.date} 2020</Typography>
                 </Paper>
                 </Grid>
                 <Grid item>
-                    
+                    <Chart/>
                 </Grid>
                 </Grid>
             </React.Fragment> )
             
           }
           </div>
-          </ThemeProvider>
+      
 
           );
         }

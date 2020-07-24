@@ -2,7 +2,7 @@
 .paper2{
     padding: 20px;
     width: 410px;
-    height: 240px;
+    height: 290px;
     border-radius: 6px !important;
     /* background-color: #333333 !important; */
 
@@ -16,13 +16,13 @@
 .image{
     background: url('../../images/doctor-man.svg');
     background-repeat: no-repeat;
-    background-size: 120px;
-    background-position-y: 1rem;
+    background-size: 33%;
+    background-position-y: 2.4rem;
     background-position-x: 90%;
 }
 
 .container{
-    margin: 20px 0;
+    margin: 25px 0;
     width: 100%;
 }
 
@@ -39,6 +39,10 @@
     /* border-bottom: 3px solid rgba(255, 0, 0, 0.932); */
 }
 
+.active{
+    color: rgb(255, 183, 0);
+}
+
 .infectedM{
     border-bottom: 8px solid rgba(255, 166, 0, 0.993);
 }
@@ -52,11 +56,12 @@
 
 @media only screen and (max-width: 600px){
     .paper2{
-        height: 230px;
+        height: 290px;
         width: 90vw;
     }
     .image{
-        background-size: 110px;
+        background-size: 140px;
         background-position-y: 1.7rem;
+        background-position-x: 95%;
     }
 }
