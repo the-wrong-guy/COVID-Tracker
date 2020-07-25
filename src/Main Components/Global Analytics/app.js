@@ -28,9 +28,9 @@ class Global extends React.Component {
 
     return (
       <div className={styles.container}>
-        <Typography style={{fontWeight : "550",marginTop:"50px",fontSize:"20px"}} color="initial">Global Statistics</Typography>
-        <Cards data={data} />
+        <Typography className={styles.header} style={{fontWeight : "550",marginTop:"50px",fontSize:"20px"}} color="initial">Global Statistics</Typography>
         <CountryPicker handleCountryChange={this.handleCountryChange} />
+        <Cards data={data} />
         <Chart data={data} country={country} />
       </div>
     );

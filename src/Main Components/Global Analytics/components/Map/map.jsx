@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {Typography} from '@material-ui/core'
+import {Typography,Paper} from '@material-ui/core'
 import styles from './map.module.css'
 var Spinner = require('react-spinkit')
 
@@ -13,19 +13,18 @@ let hideSpinner = () => {
 
     return(
         <div>
+        <Paper elevation={24} className={styles.paper}>
         {loading ? (
           <div className={styles.loader}>
           <Spinner name="ball-clip-rotate-multiple" color="red"/>
           </div>
         ) : null}
-        <div className={styles.interactive} >
-
         <iframe className={styles.iframe}
         title='corona map'
         src="https://www.trackcorona.live/map"
         onLoad={hideSpinner}
       ></iframe>
-        </div>
+        </Paper>
       </div>
     );
 }

@@ -24,22 +24,16 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         datasets: [
           {
             data: dailyData.map(({ confirmed }) => confirmed),
-            borderColor: "yellow",
+            borderColor: "rgb(212, 0, 255)",
             label: "Infected",
+            pointRadius: 1,
             fill: true
           },
           {
             data: dailyData.map(({ deaths }) => deaths),
             borderColor: "red",
-            backgroundColor: "rgba(255, 0 , 0 , 0.5)",
             label: "Deaths",
-            fill: true
-          },
-          {
-            data: dailyData.map(({ recovered }) => recovered),
-            borderColor: "red",
-            backgroundColor: "rgba(255, 0 , 0 , 0.5)",
-            label: "Recovered",
+            pointRadius: 1,
             fill: true
           }
         ]
@@ -77,9 +71,8 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         labels: ["Infected", "Recovered", "Deaths"],
         datasets: [
           {
-            label: "People",
             backgroundColor: [
-              "rgba(29, 29, 221, 0.5)",
+              "#ff8800",
               "rgb(0, 252, 97)",
               "rgba(255, 0, 0, 0.932)"
             ],
@@ -88,12 +81,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         ]
       }}
       options={{
-        legend: {
-          position: "top",
-          labels: {
-            usePointStyle: true
-          }
-        },
+        legend: false,
         scales: {
           xAxes: [
             {
@@ -105,7 +93,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
           yAxes: [
             {
               gridLines: {
-                display: false
+                display: true
               }
             }
           ]
@@ -117,7 +105,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
 
   return (
     <div className={styles.container}>
-      <Card elevation={10} className={styles.card}>
+      <Card elevation={24} className={styles.card}>
         {country ? barChart : lineChart}
       </Card>
       <Map/>

@@ -31,6 +31,9 @@
     .iframe{
         height: max-content;
     }
+    .iframe2{
+        height: 90vh;
+    }
     .header{
         margin-left: 10px !important;
     }

@@ -1,4 +1,12 @@
-.formControl{
+.formcontrol{
     width: 30%;
-    margin-bottom:30px !important;
+    margin:30px 0 !important;
+    border: 2px solid rgb(212, 0, 255);
+}
+
+@media screen and (max-width:600px){
+    .formcontrol{
+        margin-top:15px !important;
+        margin-bottom: 0 !important;
+    }
 }

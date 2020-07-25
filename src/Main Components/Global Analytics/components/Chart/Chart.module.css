@@ -6,10 +6,10 @@
   }
   
   .card {
-    margin: 32px 0;
-    width: 40vw !important;
+    width: 40vw;
     height: 45vh;
     padding: 2%;
+    margin-top: 20px;
   }
   
   @media screen and (max-width: 600px) {
