@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,Container, IconButton} from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
-import { useHistory,withRouter,Link,Router } from 'react-router-dom';
+// import { useHistory,withRouter,Link,Router } from 'react-router-dom';
+import history from './history';
 import {
   Drawer,
   ListItem,
@@ -64,7 +65,6 @@ function ScrollTop(props) {
     }
   });
 
-  const history = useHistory();
   const itemsList = [
     {
       text: "Home",
@@ -74,17 +74,17 @@ function ScrollTop(props) {
     {
       text: "What is COVID-19?",
       icon: <HelpOutlineIcon />,
-      // onClick: () => history.push("/what_is_covid")
+      onClick: () => history.push("/what-is-covid")
     },
     {
       text: "Prevention",
       icon: <LocalHospitalIcon />,
-      // onClick: () => history.push("/prevention")
+      onClick: () => history.push("/prevention")
     },
     {
       text: "Global anlytics",
       icon: <PublicIcon />,
-      onClick: () => history.push("/global_analytics")
+      onClick: () => history.push("/global-statistics")
     }
   ];
 
@@ -157,7 +157,7 @@ function ScrollTop(props) {
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
       <Container>
-       <App/>
+            <App/>
       </Container>
       <ScrollTop {...props}>
         <Fab color="secondary" size="small" aria-label="scroll back to top">

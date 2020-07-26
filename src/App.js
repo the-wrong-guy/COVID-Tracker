@@ -4,18 +4,19 @@ import What from "./Main Components/What is COVID/what";
 import Home from "./Main Components/Home/App";
 import Global from "./Main Components/Global Analytics/app";
 import Error from "./Main Components/Error 404/error";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import {Switch, Route,Router} from "react-router-dom";
+// import BackToTop from './menu'
+import history from './history';
 
-
-export default function App() {
+ function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <Router history={history}>
         <Switch>
           <Route exact from="/" component={Home} />
           <Route
             exact
-            path="/global_analytics"
+            path="/global-statistics"
             component={Global}
           />
           <Route
@@ -32,7 +33,9 @@ export default function App() {
             component={Error}
           />
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 }
+
+export default App
