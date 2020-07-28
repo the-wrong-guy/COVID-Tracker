@@ -140,4 +140,3 @@ export function unregister() {
   }
 }
 
-window.self.addEventListener('fetch', function(event) {});
