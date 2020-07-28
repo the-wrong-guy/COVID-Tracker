@@ -44,6 +44,15 @@
       "src": "images/icongen/android-144x144.png",
       "type": "image/png",
       "sizes": "144x144"
+    },
+    {
+      "src": "images/icongen/android-48x48.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    }, {
+      "src": "images/icongen/android-36x36.png",
+      "type": "image/png",
+      "sizes": "36x36"
     }
 
   ],
