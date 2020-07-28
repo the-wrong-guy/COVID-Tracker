@@ -29,7 +29,23 @@
       "src": "images/icons/512x512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "images/icongen/android-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "images/icongen/android-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "images/icongen/android-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
     }
+
   ],
   "start_url": "/",
   "display": "standalone",
