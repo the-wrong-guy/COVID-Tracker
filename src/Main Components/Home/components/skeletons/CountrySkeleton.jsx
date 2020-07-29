@@ -8,13 +8,19 @@ import cx from 'classnames'
 export default function CountrySkeleton(){
     return(
             <Paper className={cx(styles.paper2)}>
-            <Skeleton animation="wave"  width="40%" variant="text"  />
-            <Skeleton animation="wave" className={cx(styles.text)} width="60%" variant="text"  />
-            <Skeleton animation="wave" width="40%" variant="text"  />
-            <Skeleton animation="wave" className={cx(styles.text)} width="60%" variant="text"  />
-            <Skeleton animation="wave" width="40%" variant="text"  />
-            <Skeleton animation="wave" className={cx(styles.text)} width="60%" variant="text"  />
-            <Skeleton animation="wave" variant="text" width="80%"/>
+                <Skeleton animation="wave"  width="55%" variant="text"  />
+                <Skeleton animation="wave" className={cx(stylesTwo.text)} width="30%" variant="text"  />
+
+                <Skeleton animation="wave"  width="55%" variant="text"  />
+                <Skeleton animation="wave" className={cx(stylesTwo.text)} width="30%" variant="text"  />
+
+                <Skeleton animation="wave"  width="55%" variant="text"  />
+                <Skeleton animation="wave" className={cx(stylesTwo.text)} width="30%" variant="text"  />
+
+                <Skeleton animation="wave"  width="55%" variant="text"  />
+                <Skeleton animation="wave" className={cx(stylesTwo.text)} width="30%" variant="text"  />
+
+                <Skeleton animation="wave" style={{marginTop:"20px"}} variant="text" width="70%"/>
             </Paper>
     )
 }

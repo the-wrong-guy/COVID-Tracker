@@ -2,7 +2,7 @@
 import React, {Component} from 'react';
 import {Line} from 'react-chartjs-2';
 import Axios from 'axios';
-import {Paper} from '@material-ui/core'
+import {Paper, Typography} from '@material-ui/core'
 import styles from './daily.module.css'
 import Test from '../Test per 1000/test'
 
@@ -13,6 +13,7 @@ class Chart extends Component{
     this.state = {
       chartData:props.chartData,
       posts:[],
+      loading : true
     }
   }
 
@@ -22,7 +23,7 @@ class Chart extends Component{
         //console.log(response)
         // this.setState({lists:response.data})
         // 
-        this.setState({posts:response.data.statewise})
+        this.setState({posts:response.data.statewise,loading : false})
         //console.log(response.data.statewise)
         const posts = response.data.statewise
         //console.log(posts)
@@ -114,37 +115,40 @@ class Chart extends Component{
     
       
     return (
-      <div className={styles.container}>
-        <Paper elevation={24} className={styles.paper}>
-        <Line
-          data={this.state.chartData}
-          options={{
-            title:{
-              display:this.props.displayTitle,
-              text:'State-Wise Total Cases Distribution',
-              fontSize:15
-            },
-            legend:{
-              display:false,
-              position:this.props.legendPosition
-            },
-            scales: {
-              xAxes: [{
-                  gridLines: {
-                      display:false
-                  }
-              }],
-              yAxes: [{
-                  gridLines: {
-                      display:true
-                  }   
-              }]
-          }
-          }}
-        />
-        </Paper>
-        <Test/>
-      </div>
+        <div>
+        { this.state.loading ? (<Typography variant="h5" color="initial">Loading..</Typography>) : ( <div className={styles.container}>
+          <Paper elevation={24} className={styles.paper}>
+          <Line
+            data={this.state.chartData}
+            options={{
+              title:{
+                display:this.props.displayTitle,
+                text:'State-Wise Total Cases Distribution',
+                fontSize:15
+              },
+              legend:{
+                display:false,
+                position:this.props.legendPosition
+              },
+              scales: {
+                xAxes: [{
+                    gridLines: {
+                        display:false
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display:true
+                    }   
+                }]
+            }
+            }}
+          />
+          </Paper>
+          <Test/>
+        </div> ) 
+      }
+     </div>
     )
   }
 }

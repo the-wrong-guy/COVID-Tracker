@@ -3,7 +3,9 @@ import { Grid, Paper, Typography} from "@material-ui/core";
 import CountUp from 'react-countup';
 import styles from './country.module.css'
 import cx from 'classnames'
+import Skeleton from '@material-ui/lab/Skeleton'
 import CountrySkeleton from '../skeletons/CountrySkeleton'
+import ChartSkeleton from '../skeletons/ChartSkeleton'
 import Chart from '../Country Chart/countryLineChart'
 // import {
 //   createMuiTheme,
@@ -48,8 +50,9 @@ export default class CountryCard extends React.Component{
             <div className={styles.container}>
             { this.state.loading || !this.state.confirmed || !this.state.deaths || !this.state.recovered  ? 
               (<React.Fragment>
-                <Grid container justify="center">
-                  <Grid item><CountrySkeleton/></Grid>  
+                <Grid container  justify="space-evenly">
+                  <Grid item><CountrySkeleton/></Grid>
+                  <Grid item><ChartSkeleton/></Grid>  
                 </Grid>  
               </React.Fragment>) : 
               

@@ -1,0 +1,26 @@
+.text {
+    /* width: 100px !important; */
+    display: flex;
+    justify-self: flex-end;
+    margin-right: 10px;
+    /* position: absolute; */
+  }
+  
+  .container {
+    display: grid;
+    padding: 20px;
+    width: 410px;
+    height: 295px;
+    border-radius: 6px !important;
+    background: #ffffff;
+  }
+
+  @media (max-width:600px){
+      .text{
+          margin: 0;
+      }
+    .container{
+        width: 90vw;
+        height: 285px;
+    }
+}

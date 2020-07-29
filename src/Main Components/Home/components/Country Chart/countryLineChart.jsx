@@ -19,8 +19,7 @@ function Chart() {
 
 
     const lineChart = (
-        dailyData.length
-        ?(<Line
+      <Line
             data={{
                 labels : dailyData.map(({date}) => date ),
                 datasets : [{
@@ -68,7 +67,7 @@ function Chart() {
                 },
                 
             }}
-        />) : <ChartSkeleton/>
+        />
     );
 
      return(

@@ -1,3 +1,8 @@
+.text{
+    margin-top: 2px !important;
+    margin-bottom: 15px !important;
+}
+
 .skeleton{
     margin-bottom: 5px !important;
 }
@@ -7,6 +12,5 @@
 }
 
 .alignRight{
-    display: flex;
-    justify-content: right;
+   float: right;
 }
