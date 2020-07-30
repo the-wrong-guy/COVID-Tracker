@@ -55,7 +55,7 @@ function ScrollTop(props) {
 
  function BackToTop(props) {
   const [toggle, setToggle] = useState(false);
-  const [themeMode, SetThemeMode] = useState(getMode);
+  const [themeMode, SetThemeMode] = useState("dark");
   const theme = createMuiTheme({
     palette: {
       type: themeMode,
