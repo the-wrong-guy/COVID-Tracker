@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {AppBar,Zoom,Toolbar,Typography,CssBaseline,useScrollTrigger,Fab,makeStyles,Container, IconButton} from '@material-ui/core'
 import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 // import { useHistory,withRouter,Link,Router } from 'react-router-dom';
@@ -55,7 +55,7 @@ function ScrollTop(props) {
 
  function BackToTop(props) {
   const [toggle, setToggle] = useState(false);
-  const [themeMode, SetThemeMode] = useState("light");
+  const [themeMode, SetThemeMode] = useState(getMode);
   const theme = createMuiTheme({
     palette: {
       type: themeMode,
@@ -64,6 +64,19 @@ function ScrollTop(props) {
       }
     }
   });
+
+  useEffect(() => {
+    localStorage.setItem("Tmode", JSON.stringify(themeMode));
+  }, [themeMode]);
+
+  function getMode() {
+    const savedmode = JSON.parse(localStorage.getItem("Tmode"));
+    if(savedmode === '')
+     {
+       return ("dark")
+     }
+     else return savedmode
+  }
 
   const itemsList = [
     {

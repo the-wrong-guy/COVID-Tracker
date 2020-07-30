@@ -16,6 +16,7 @@
     "material-ui-country-flags": "^3.0.1",
     "react": "^16.13.1",
     "react-chartjs-2": "^2.9.0",
+    "react-clear-cache": "^1.3.0",
     "react-countup": "^4.3.3",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -43,5 +44,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+    "prebuild": "npm run generate-build-meta",
+    "generate-build-meta": "./node_modules/react-clear-cache/bin/cli.js"
 }
+
