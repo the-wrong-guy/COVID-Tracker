@@ -121,7 +121,7 @@ class DoughnutChart extends Component {
               position: this.props.legendPosition
             },
             responsive: true,
-            maintainAspectRatio: true, 
+            maintainAspectRatio: false, 
           }}
         />
         </Paper>

@@ -15,7 +15,8 @@
         display: flex;
         justify-content: center;
         width: 90vw;
-        padding: 15px;
+        height: 300px;
+        padding-bottom: 10px;
     }
 }
 

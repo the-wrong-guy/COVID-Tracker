@@ -9,13 +9,14 @@
     width: 40vw;
     height: 45vh;
     margin-top: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
   }
   
   @media screen and (max-width: 600px) {
     .card {
       width: 90vw !important;
-      height: 45vw !important;
+      height: 60vw !important;
+      padding: 0;
     }
   }
   

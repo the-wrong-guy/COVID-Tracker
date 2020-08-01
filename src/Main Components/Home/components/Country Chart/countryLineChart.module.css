@@ -3,14 +3,14 @@
    justify-content: center !important;
    width: 500px;
    height: 290px;
-   padding:20px;
+   padding:10px;
    /* margin-bottom: 20px; */
 }
 
 @media only screen and (max-width: 600px){
     .Card{
         width: 90vw;
-        height: 195px;
+        height: 250px;
         padding: 5px;
         margin-top: 20px;
     }

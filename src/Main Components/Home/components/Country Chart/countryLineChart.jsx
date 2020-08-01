@@ -48,6 +48,8 @@ function Chart() {
                 
             }}
             options = {{
+                responsive :true,
+                maintainAspectRatio: false,
                 legend: {
                     position: 'top',
                     labels: {
@@ -68,6 +70,7 @@ function Chart() {
                             callback: function (value, index, values) {
                               return numeral(value).format("0a");
                             },
+                            lineHeight: 2.2
                           },   
                     }]
                 },

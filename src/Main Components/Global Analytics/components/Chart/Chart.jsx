@@ -18,6 +18,10 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
     // console.log(dailyData);
   }, []);
 
+
+// let DATE = dailyData.map(({ date }) => new Date(date).toLocaleString())
+// console.log(DATE)
+
   const lineChart = dailyData.length ? (
     <Line
       data={{
@@ -29,7 +33,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
             backgroundColor:"rgba(255, 157, 0, 0.5)",
             label: "Infected",
             pointRadius: 0,
-            fill: true
+            
           },
           {
             data: dailyData.map(({ deaths }) => deaths),
@@ -37,34 +41,43 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
             backgroundColor:"rgba(255, 72, 0, 0.5)",
             label: "Deaths",
             pointRadius: 0,
-            fill: true
+            
           }
         ]
       }}
       options={{
+        responsive :true,
+        maintainAspectRatio: false,
         legend: {
           position: "top",
           labels: {
             usePointStyle: true
           }
         },
+        
         scales: {
           xAxes: [
             {
               gridLines: {
                 display: false
+              },
+              ticks:{
+                lineHeight: 1.5,
               }
             }
           ],
           yAxes: [
             {
               gridLines: {
-                display: true
+                display: true,
+                lineWidth: 1
               },
               ticks: {
                 callback: function (value, index, values) {
                   return numeral(value).format("0a");
-                }
+                },
+                lineHeight: 3
+                
               }
             }
           ]
@@ -89,6 +102,8 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         ]
       }}
       options={{
+        responsive :true,
+        maintainAspectRatio: false,
         legend: false,
         scales: {
           xAxes: [
