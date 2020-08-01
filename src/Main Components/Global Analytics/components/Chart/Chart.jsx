@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { fetchDailyData } from "../../api";
 import { Line, Bar } from "react-chartjs-2";
 import { Card } from "@material-ui/core";
-import Map  from '../Map/map'
+import DailyCases from '../Daily new cases/newCases'
+import numeral from "numeral";
 
 import styles from "./Chart.module.css";
 
@@ -24,16 +25,18 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
         datasets: [
           {
             data: dailyData.map(({ confirmed }) => confirmed),
-            borderColor: "rgb(212, 0, 255)",
+            borderColor: "rgba(255, 157, 0, 0.98)",
+            backgroundColor:"rgba(255, 157, 0, 0.5)",
             label: "Infected",
-            pointRadius: 1,
+            pointRadius: 0,
             fill: true
           },
           {
             data: dailyData.map(({ deaths }) => deaths),
-            borderColor: "red",
+            borderColor: "rgba(255, 72, 0, 0.98)",
+            backgroundColor:"rgba(255, 72, 0, 0.5)",
             label: "Deaths",
-            pointRadius: 1,
+            pointRadius: 0,
             fill: true
           }
         ]
@@ -57,6 +60,11 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
             {
               gridLines: {
                 display: true
+              },
+              ticks: {
+                callback: function (value, index, values) {
+                  return numeral(value).format("0a");
+                }
               }
             }
           ]
@@ -94,6 +102,11 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
             {
               gridLines: {
                 display: true
+              },
+              ticks: {
+                callback: function (value, index, values) {
+                  return numeral(value).format("0a");
+                },
               }
             }
           ]
@@ -108,7 +121,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
       <Card elevation={24} className={styles.card}>
         {country ? barChart : lineChart}
       </Card>
-      <Map/>
+      <DailyCases/>
     </div>
   );
 };

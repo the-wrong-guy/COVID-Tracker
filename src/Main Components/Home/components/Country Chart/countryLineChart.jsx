@@ -3,6 +3,7 @@ import { Line } from 'react-chartjs-2'
 import { ChartData } from '../../api/api';
 import {Card} from '@material-ui/core'
 import ChartSkeleton from '../skeletons/ChartSkeleton'
+import numeral from "numeral";
 import styles from './countryLineChart.module.css'
 
 function Chart() {
@@ -62,7 +63,12 @@ function Chart() {
                     yAxes: [{
                         gridLines: {
                             display:true
-                        }   
+                        },
+                        ticks: {
+                            callback: function (value, index, values) {
+                              return numeral(value).format("0a");
+                            },
+                          },   
                     }]
                 },
                 

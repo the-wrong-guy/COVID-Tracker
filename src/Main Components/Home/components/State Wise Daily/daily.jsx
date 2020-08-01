@@ -5,6 +5,7 @@ import Axios from 'axios';
 import {Paper, Typography} from '@material-ui/core'
 import styles from './daily.module.css'
 import Test from '../Test per 1000/test'
+import numeral from "numeral";
 
 
 class Chart extends Component{
@@ -139,7 +140,12 @@ class Chart extends Component{
                 yAxes: [{
                     gridLines: {
                         display:true
-                    }   
+                    },
+                    ticks: {
+                        callback: function (value, index, values) {
+                          return numeral(value).format("0a");
+                        },
+                      },   
                 }]
             }
             }}

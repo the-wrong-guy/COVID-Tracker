@@ -8,15 +8,14 @@
   .card {
     width: 40vw;
     height: 45vh;
-    padding: 2%;
     margin-top: 20px;
+    padding-top: 20px;
   }
   
   @media screen and (max-width: 600px) {
     .card {
       width: 90vw !important;
       height: 45vw !important;
-      padding: 0;
     }
   }
   

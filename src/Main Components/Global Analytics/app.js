@@ -3,6 +3,7 @@ import { Cards, Chart, CountryPicker } from "./components";
 import {Typography} from '@material-ui/core'
 import styles from "./App.module.css";
 import { dataApi } from "./api";
+import Map from './components/Map/map'
 
 class Global extends React.Component {
   state = {
@@ -32,6 +33,7 @@ class Global extends React.Component {
         <CountryPicker handleCountryChange={this.handleCountryChange} />
         <Cards data={data} />
         <Chart data={data} country={country} />
+        <Map/>
       </div>
     );
   }

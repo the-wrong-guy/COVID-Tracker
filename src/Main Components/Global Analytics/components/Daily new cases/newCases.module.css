@@ -1,0 +1,11 @@
+.card{
+    width: 40vw;
+    height: 45vh;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:600px){
+    .card{
+        width: 90vw;
+    }
+}
