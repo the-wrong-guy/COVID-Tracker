@@ -15,3 +15,18 @@
     justify-content: space-between;
     padding:0 !important;
 }
+
+.homeIcon{
+    color: thistle;
+}
+.globalIcon{
+ color: greenyellow;
+}
+
+.whatIcon{
+  color: aqua;
+}
+
+.preventionIcon{
+    color: tomato;
+}

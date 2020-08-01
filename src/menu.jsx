@@ -55,7 +55,7 @@ function ScrollTop(props) {
 
  function BackToTop(props) {
   const [toggle, setToggle] = useState(false);
-  const [themeMode, SetThemeMode] = useState("dark");
+  const [themeMode, SetThemeMode] = useState(getMode);
   const theme = createMuiTheme({
     palette: {
       type: themeMode,
@@ -71,33 +71,29 @@ function ScrollTop(props) {
 
   function getMode() {
     const savedmode = JSON.parse(localStorage.getItem("Tmode"));
-    if(savedmode === '')
-     {
-       return ("dark")
-     }
-     else return savedmode
+    return savedmode || "dark" ;
   }
 
   const itemsList = [
     {
       text: "Home",
-      icon: <HomeIcon/>,
+      icon: <HomeIcon className={styles.homeIcon}/>,
       onClick: () =>{ history.push("/");  setToggle(!toggle) }
     },
     {
+      text: "Global anlytics",
+      icon: <PublicIcon  className={styles.globalIcon}/>,
+      onClick: () =>{ history.push("/global-statistics");  setToggle(!toggle)}
+    },
+    {
       text: "What is COVID-19?",
-      icon: <HelpOutlineIcon />,
+      icon: <HelpOutlineIcon  className={styles.whatIcon}/>,
       onClick: () =>{ history.push("/what-is-covid");  setToggle(!toggle) }
     },
     {
       text: "Prevention",
-      icon: <LocalHospitalIcon />,
+      icon: <LocalHospitalIcon  className={styles.preventionIcon}/>,
       onClick: () =>{ history.push("/prevention");  setToggle(!toggle)}
-    },
-    {
-      text: "Global anlytics",
-      icon: <PublicIcon />,
-      onClick: () =>{ history.push("/global-statistics");  setToggle(!toggle)}
     }
   ];
 
