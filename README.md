@@ -5,6 +5,10 @@
 - **CSS**
 
 
+##LInk of the App
+
+ [COVID Tracker](https://affectionate-borg-f746fe.netlify.app/)
+
 ## Available Scripts
 
 In the project directory, you can run:
