@@ -5,7 +5,7 @@
 - **CSS**
 
 
-## LInk of the App
+## Link of the App
 
  [COVID Tracker](https://affectionate-borg-f746fe.netlify.app/  "COVID Tracker") 🦠
 
