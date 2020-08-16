@@ -5,9 +5,9 @@
 - **CSS**
 
 
-##LInk of the App
+## LInk of the App
 
- [COVID Tracker](https://affectionate-borg-f746fe.netlify.app/)
+ [COVID Tracker](https://affectionate-borg-f746fe.netlify.app/  COVID Tracker) 🦠
 
 ## Available Scripts
 
