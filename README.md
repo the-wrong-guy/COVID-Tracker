@@ -1,8 +1,8 @@
 ## Languages and Technologies Used
-- React.js
-- Material UI 
-- COVID-19 API's
-- CSS
+- **React.js**
+- **Material UI** 
+- **REST API's**
+- **CSS**
 
 
 ## Available Scripts
