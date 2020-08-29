@@ -4,18 +4,10 @@
 - **REST API's**
 - **CSS**
 
-##ScreenShots of the App
+## ScreenShots of the App
 
-![alt text](https://photos.google.com/u/1/photo/AF1QipNcftN6ZBYualSqfxKowQQhAYy5w7j2BRwMGh2x)
-![alt text](https://photos.google.com/u/1/photo/AF1QipM35WVmtpl2VtLWkWh5P2hqF4415e_xqXbbm-RW)
-![alt text](https://photos.google.com/u/1/photo/AF1QipMtWqr6Vf19iebcEcVp34W0QwtBE8bVpUz9bFbj)
-![alt text](https://photos.google.com/u/1/photo/AF1QipOmiWIYLuQ0EPhVKNgjSbDiu_te8NuU-66SuMC5)
-![alt text](https://photos.google.com/u/1/photo/AF1QipPVt7xyt0WxDxojKf6urqF2vpKYqTHMhlNpKqD0)
-![alt text](https://photos.google.com/u/1/photo/AF1QipOASVUJY-2rZiMynWHZr1rHELD2M7ahAwRNo9LJ)
-![alt text](https://photos.google.com/u/1/photo/AF1QipPLxdkSHUkowawxYTxxPRFwCv2NHe12MCL-dUtJ)
-![alt text](https://photos.google.com/u/1/photo/AF1QipPGcxHL_3cDDHYlwr7xJXiWvNgyGrYTcxvxmK7D)
-![alt text](https://photos.google.com/u/1/photo/AF1QipOPCxEpolDeM7JYG54BOtuUp_dX1M5X6O2LRxGu)
-![alt text](https://photos.google.com/u/1/photo/AF1QipMstIpz2zES8zVUtb1QWY2jPttFEEP7dvMD90z2)
+![alt text](https://lh3.googleusercontent.com/p4Ef6CDsv6UUExdr4sjW9iKHFlOeAxB-G_j7wsAXoNbjwmOgsnAIZ2w2fgGsXNPalXHNG95Z7u4h_gW12oMobKxYYJ6iXAZYiU7579VjKa4ufNHQRzINYtqMUzfU_5b4jGIQOgSelqsnq960VVT3R3uG0r0OayVwc01RSqKkI9yC-N36pJIwdWtbFdRK-Mr20xWie9fIYcYW1WPO_l1nH_oDVebh6-94UvKU4feZYVHIx4vvkmmkJNf5k02S0esjpZGRmPTkJykmN5Z__ZeuRna8VJ7ysQIwkWuJ0LKs8dSSI91YtJgYV7-icJMbSXt0kUhjO29iREs58lG14rZqvjLqC5qRD-Tr7I_q3cr0jTXJGGOCQo9yUThdMh9YmdenajBxLLrznk9KUoRscHfrzvTzSJFD-vvpuzeutpSHHpGUcpb8P7hMmsyLy_a8WPjh_mNGRd8PMu8l9HFsIaxfCzzOdgc2e9F4p-E01ODfRImy1azu6OvHdDHNej-RLw2qUZPKo26vuOnK3NL7GDB7PI0trz6isSdmw359YOxSpe_4JZQIfwK7Z8nmhC-R-ON1fpwAvnjjuT52dVm2CRgcFAfbs0-yB04ZZruXd_UMtkkki-Ir3ug5A0Z8fsz6m1ZEfuU-mDHfrQk-pL2u5RnAa6ArWFOyiKBZiY83FQbWdqUm-e2NqvDuBZ5C37_7Uw=w1920-h897-no?authuser=1)
+
 
 
 ## Link of the App
