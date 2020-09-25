@@ -35,7 +35,7 @@ export default class CountryCard extends React.Component{
           const data = await response.json();
           const pop = data.cases_time_series.pop()
           this.setState({confirmed:pop.totalconfirmed, deaths:pop.totaldeceased, recovered:pop.totalrecovered,date : pop.date, loading:false}) ;
-          console.log(data);
+          // console.log(data);
         }
 
         // spacing deafult value is 8px , so the 3*8=24px width column

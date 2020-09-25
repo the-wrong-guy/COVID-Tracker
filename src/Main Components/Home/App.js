@@ -32,7 +32,7 @@ handleStateChange = async(states) => {
 }
   render(){
     const {data, states} = this.state;
-    console.log(data);
+    // console.log(data);
     return (
       <div className="App">
         <CssBaseline/>

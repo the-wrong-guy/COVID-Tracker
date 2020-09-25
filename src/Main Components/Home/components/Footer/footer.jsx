@@ -12,7 +12,7 @@ function Footer(){
                 <IconButton aria-label="" href="https://github.com/the-wrong-guy" target="blank">
                   <GitHubIcon/>
                 </IconButton>
-                <IconButton aria-label="" href="https://www.instagram.com/________the_wrong_guy_________/" target="blank">
+                <IconButton aria-label="" href="https://www.instagram.com/bhargabs_photography/" target="blank">
                 <InstagramIcon/>
                 </IconButton>  
                 </div>

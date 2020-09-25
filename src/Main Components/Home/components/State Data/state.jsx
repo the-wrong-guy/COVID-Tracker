@@ -13,9 +13,8 @@ import moment from 'moment'
               const [deaths,setDeaths] = useState('')
               const [recovered,setRecovered] = useState('')
               const [lastUpdated,setLastUpdated] = useState('')
-              let curTime = new Date().toLocaleString()
               const { data, states } = props;
-              console.log(props)
+              // console.log(props)
 
               useEffect(() => {
 
@@ -33,7 +32,7 @@ import moment from 'moment'
                 
               }, [data])
 
-              console.log(lastUpdated)
+              // console.log(lastUpdated)
 
         // spacing deafult value is 8px , so the 3*8=24px width column
 
