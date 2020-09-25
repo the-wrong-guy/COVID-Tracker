@@ -78,22 +78,22 @@ function ScrollTop(props) {
     {
       text: "Home",
       icon: <HomeIcon className={styles.homeIcon}/>,
-      onClick: () =>{ history.push("/");  setToggle(!toggle) }
+      onClick: () =>{ history.push("/");  setToggle(!toggle); window.scrollTo({ top: 0 });}
     },
     {
       text: "Global anlytics",
       icon: <PublicIcon  className={styles.globalIcon}/>,
-      onClick: () =>{ history.push("/global-statistics");  setToggle(!toggle)}
+      onClick: () =>{ history.push("/global-statistics");  setToggle(!toggle); window.scrollTo({ top: 0 });}
     },
     {
       text: "What is COVID-19?",
       icon: <HelpOutlineIcon  className={styles.whatIcon}/>,
-      onClick: () =>{ history.push("/what-is-covid");  setToggle(!toggle) }
+      onClick: () =>{ history.push("/what-is-covid");  setToggle(!toggle); window.scrollTo({ top: 0 });}
     },
     {
       text: "Prevention",
       icon: <LocalHospitalIcon  className={styles.preventionIcon}/>,
-      onClick: () =>{ history.push("/prevention");  setToggle(!toggle)}
+      onClick: () =>{ history.push("/prevention");  setToggle(!toggle); window.scrollTo({ top: 0 });}
     }
   ];
 

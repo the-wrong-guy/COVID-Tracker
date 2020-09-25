@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 20px 0;
+    gap: 3px;
   }
   
   .card {
@@ -19,4 +20,12 @@
       padding: 0;
     }
   }
+
+  /* @media screen and (max-width: 1024px) {
+    .card {
+      width: 45vw !important;
+      height: 50vw !important;
+      padding: 0;
+    }
+  } */
   

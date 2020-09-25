@@ -104,7 +104,7 @@ const DailyCases = ({ casesType = "cases", ...props }) => {
   }, [casesType]);
   return (
     <div className={props.className}>
-     <Card elevation={24} className={styles.card}>
+     <Card elevation={9} className={styles.card}>
      {data?.length > 0 && (
         <Line
           options={options}

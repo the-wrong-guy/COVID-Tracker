@@ -3,10 +3,10 @@ import { Grid, Paper, Typography} from "@material-ui/core";
 import CountUp from 'react-countup';
 import styles from './country.module.css'
 import cx from 'classnames'
-import Skeleton from '@material-ui/lab/Skeleton'
 import CountrySkeleton from '../skeletons/CountrySkeleton'
 import ChartSkeleton from '../skeletons/ChartSkeleton'
 import Chart from '../Country Chart/countryLineChart'
+import moment from 'moment';
 // import {
 //   createMuiTheme,
 //   makeStyles,
@@ -43,7 +43,7 @@ export default class CountryCard extends React.Component{
         render(){
 
           const active = this.state.confirmed - this.state.recovered;
-          console.log(active) 
+          // console.log(active) 
 
           return (
      
@@ -69,7 +69,7 @@ export default class CountryCard extends React.Component{
                     <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={active} duration = {3.5} separator = ","/></Typography>
                     <Typography className={cx(styles.deaths)}  varient="caption">Deceased</Typography>
                     <Typography className={cx(styles.text)} varient="h6"><CountUp  start ={0} end={this.state.deaths} duration = {3.5} separator = ","/></Typography>
-                    <Typography color="textSecondary" varient="overline">As on {this.state.date} 2020</Typography>
+                    <Typography color="textSecondary" varient="overline">As on {moment(this.state.date, "DD/MM/YYYY HH:mm:ss").calendar()}</Typography>
                 </Paper>
                 </Grid>
                 <Grid item>

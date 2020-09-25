@@ -1,14 +1,15 @@
 import React,{useState} from 'react';
 import {Typography,Paper} from '@material-ui/core'
 import styles from './map.module.css'
-var Spinner = require('react-spinkit')
+import Spinner from 'react-spinkit'
+
 
 export default function Map(){
 
   const [loading , setLoading] = useState(true)
 let hideSpinner = () => {
   setLoading(false)
-  console.log('Finished')
+  // console.log('Finished')
   };
 
     return(

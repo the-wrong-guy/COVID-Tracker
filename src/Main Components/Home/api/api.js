@@ -17,7 +17,8 @@ var url = 'https://api.covid19india.org/data.json';
       active :pop[index].active,
       confirmed : pop[index].confirmed,
       deaths : pop[index].deaths,
-      recovered: pop[index].recovered
+      recovered: pop[index].recovered,
+      lastUpdated : pop[index].lastupdatedtime
     }
     return statedta
   }catch(error){console.log(error)}

@@ -9,3 +9,11 @@
         width: 90vw;
     }
 }
+
+/* @media screen and (max-width: 1024px) {
+    .card {
+      width: 45vw !important;
+      height: 50vw !important;
+      padding: 0;
+    }
+  } */

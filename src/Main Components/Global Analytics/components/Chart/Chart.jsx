@@ -133,7 +133,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
 
   return (
     <div className={styles.container}>
-      <Card elevation={24} className={styles.card}>
+      <Card elevation={10} className={styles.card}>
         {country ? barChart : lineChart}
       </Card>
       <DailyCases/>

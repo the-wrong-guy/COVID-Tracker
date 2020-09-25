@@ -1,13 +1,13 @@
 .container{
     display: grid;
-    grid-template-columns: auto auto;
-    grid-gap: 15px;
-    justify-content: space-evenly;
+    grid-template-rows: auto auto;
+    grid-gap: 40px;
+    justify-content: center;
     margin-bottom: 50px;
 }
 
 .paper{
-    width: 40vw;
+    width: 73vw;
     /* height: 300px; */
     height: auto;
     padding: 5px;
