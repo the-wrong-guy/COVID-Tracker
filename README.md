@@ -6,7 +6,7 @@
 
 ## ScreenShots of the App
 
-![COVID TRACKER](https://lh3.googleusercontent.com/p4Ef6CDsv6UUExdr4sjW9iKHFlOeAxB-G_j7wsAXoNbjwmOgsnAIZ2w2fgGsXNPalXHNG95Z7u4h_gW12oMobKxYYJ6iXAZYiU7579VjKa4ufNHQRzINYtqMUzfU_5b4jGIQOgSelqsnq960VVT3R3uG0r0OayVwc01RSqKkI9yC-N36pJIwdWtbFdRK-Mr20xWie9fIYcYW1WPO_l1nH_oDVebh6-94UvKU4feZYVHIx4vvkmmkJNf5k02S0esjpZGRmPTkJykmN5Z__ZeuRna8VJ7ysQIwkWuJ0LKs8dSSI91YtJgYV7-icJMbSXt0kUhjO29iREs58lG14rZqvjLqC5qRD-Tr7I_q3cr0jTXJGGOCQo9yUThdMh9YmdenajBxLLrznk9KUoRscHfrzvTzSJFD-vvpuzeutpSHHpGUcpb8P7hMmsyLy_a8WPjh_mNGRd8PMu8l9HFsIaxfCzzOdgc2e9F4p-E01ODfRImy1azu6OvHdDHNej-RLw2qUZPKo26vuOnK3NL7GDB7PI0trz6isSdmw359YOxSpe_4JZQIfwK7Z8nmhC-R-ON1fpwAvnjjuT52dVm2CRgcFAfbs0-yB04ZZruXd_UMtkkki-Ir3ug5A0Z8fsz6m1ZEfuU-mDHfrQk-pL2u5RnAa6ArWFOyiKBZiY83FQbWdqUm-e2NqvDuBZ5C37_7Uw=w1920-h897-no?authuser=1)
+![COVID TRACKER]( src\Screenshots\Screenshot (125).png)
 
 ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
 
@@ -64,7 +64,7 @@ ________________________________________________________________________________
 
 ## Link of the App
 
- [COVID Tracker](https://affectionate-borg-f746fe.netlify.app/  "COVID Tracker") 🦠
+ [COVID Tracker](https://covid-19-tracker-bhargab.netlify.app/  "COVID Tracker") 🦠
 
 ## Available Scripts
 
