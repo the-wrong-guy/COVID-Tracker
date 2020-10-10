@@ -1,11 +1,25 @@
-import React from "react";
+import React,{useState} from "react";
 import { Typography } from "@material-ui/core";
 import styles from './what.module.css'
 
 export default function What() {
+  const [loading , setLoading] = useState(true)
+  let hideSpinner = () => {
+    setLoading(false)
+    // console.log('Finished')
+    };
   return (
     <div className={styles.container}>
       <Typography className={styles.header} variant="h5" color="initial">What is COVID-19?</Typography>
+      {loading ? (<p>loading...</p>):(<iframe
+        src="https://www.youtube.com/embed/OZcRD9fV7jo"
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        title="What is COVID-19?"
+        className={styles.iframe}
+        onLoad={hideSpinner}
+      />)}
       <iframe
         src="https://www.youtube.com/embed/OZcRD9fV7jo"
         frameBorder="0"
@@ -13,6 +27,7 @@ export default function What() {
         allowFullScreen
         title="What is COVID-19?"
         className={styles.iframe}
+        onLoad={hideSpinner}
       />
       <iframe
       src="https://www.who.int/health-topics/coronavirus#tab=tab_1"

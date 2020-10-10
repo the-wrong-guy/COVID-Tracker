@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter} from 'react-router-dom'
 import './index.css';
 import BackToTop from './menu'
-import ClearCache from 'react-clear-cache';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

@@ -22,7 +22,7 @@ const Chart = ({ data: { confirmed, deaths, recovered }, country }) => {
 // let DATE = dailyData.map(({ date }) => new Date(date).toLocaleString())
 // console.log(DATE)
 
-  const lineChart = dailyData.length ? (
+  const lineChart = dailyData ? (
     <Line
       data={{
         labels: dailyData.map(({ date }) => date),
