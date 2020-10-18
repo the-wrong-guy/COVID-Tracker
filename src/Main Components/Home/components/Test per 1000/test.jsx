@@ -19,18 +19,21 @@ class Test extends Component {
     componentDidMount() {
         Axios.get('https://api.covid19india.org/data.json')
         .then(response => {
-            ////console.log(response)
+            console.log(response)
             this.setState({posts:response.data.statewise})
         })
         .catch(error => {
-            ////console.log(error)
+            console.log(error)
         })
 
         Axios.get('https://api.covid19india.org/state_test_data.json')
         .then(response => {
+            console.log(response)
             this.setState({data:response.data.states_tested_data})
             var tested=response.data.states_tested_data
+            // console.log(tested.state)
             const stdata=this.state.posts
+            console.log(stdata)
         var index=0,index1=0
         for(var i=0;i<stdata.length;i++)
         {
@@ -73,7 +76,7 @@ class Test extends Component {
             }
         }
         this.setState({posts:stdata})
-        //console.log(stdata)
+        console.log(stdata)
         var states=[]
         var info1=[]
         var info2=[]
@@ -83,10 +86,11 @@ class Test extends Component {
          
             states[i-1]=stdata[i].state
             info1[i-1]=stdata[i].totaltested
-            //console.log(stdata[i].state)
+            console.log(stdata[i].state)
             info2[i-1]=stdata[i].testsperthousand
-            //console.log(info2[i-1])
+            console.log(info2[i-1])
             info3[i-1]=stdata[i].testpositivityrate
+            console.log(info3[i-1])
             info3[i-1].replace('%','')
             info3[i-1]=parseInt(info3[i-1])
             //console.log(info3[i-1])
@@ -151,7 +155,7 @@ class Test extends Component {
           })
         })
         .catch(error => {
-            ////console.log(error)
+            console.log(error)
         })
     }
     static defaultProps = {

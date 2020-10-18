@@ -4,6 +4,10 @@
 - **REST API's**
 - **CSS**
 
+## Link of the App 🦠
+
+ [COVID Tracker](https://covid-19-tracker-bhargab.netlify.app/  "COVID Tracker") 
+
 ## ScreenShots of the App
 
 ![COVID TRACKER](./Screenshots/Screenshot%20(125).png)
@@ -61,9 +65,7 @@ ________________________________________________________________________________
 ![COVID TRACKER](./Screenshots/Screenshot%20(134).png)
 
 
-## Link of the App
 
- [COVID Tracker](https://covid-19-tracker-bhargab.netlify.app/  "COVID Tracker") 🦠
 
 ## Available Scripts
 
