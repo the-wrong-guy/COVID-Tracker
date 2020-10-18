@@ -10,6 +10,7 @@ import DoughnutChart from './components/Doughnut Chart/doughnut'
 
 
 import { StateData } from './api/api'
+import PaperBar from './components/Paper Bar/paperBar';
 
 
 class Home extends React.Component{
@@ -37,6 +38,7 @@ handleStateChange = async(states) => {
       <div className="App">
         <CssBaseline/>
         <CountryCard/>
+        <PaperBar/>
         <Typography style={{fontWeight : "550",marginTop:"50px",fontSize:"20px"}} align="center">State Wise Data</Typography>
         <ComboBox handleStateChange={this.handleStateChange}/>
         <StateCard data={data} states={states}/>
