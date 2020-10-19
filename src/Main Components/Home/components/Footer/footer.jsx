@@ -7,7 +7,7 @@ function Footer(){
     return(
         <>
             <div>
-                <span className={styles.tagline}>Made with  &#10094; &#10095;</span>
+                <span className={styles.tagline}>Made with  &#10094;{`/`}&#10095;</span>
                 <div className={styles.icons}>
                 <IconButton aria-label="" href="https://github.com/the-wrong-guy" target="blank">
                   <GitHubIcon/>

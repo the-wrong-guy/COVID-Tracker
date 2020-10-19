@@ -4,6 +4,7 @@ import {Typography} from '@material-ui/core'
 import styles from "./App.module.css";
 import { dataApi } from "./api";
 import Map from './components/Map/map'
+import Footer from "../Home/components/Footer/footer";
 
 class Global extends React.Component {
   state = {
@@ -34,6 +35,7 @@ class Global extends React.Component {
         <Cards data={data} />
         <Chart data={data} country={country} />
         <Map/>
+        <Footer/>
       </div>
     );
   }
