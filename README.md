@@ -1,12 +1,13 @@
-## Languages and Technologies Used
+## Languages and Libraries/Technologies Used
 - **React.js**
 - **Material UI** 
 - **REST API's**
 - **CSS**
+- **Moment.js**
 
 ## Link of the App 🦠
 
- [COVID Tracker](https://covid-19-tracker-bhargab.netlify.app/  "COVID Tracker") 
+ [COVID Tracker](https://covid-19-tracker-bhargab.netlify.app/  "COVID Tracker") 👈
 
 ## ScreenShots of the App
 
