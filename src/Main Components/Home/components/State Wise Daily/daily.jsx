@@ -151,7 +151,6 @@ class Chart extends Component{
             }}
           />
           </Paper>
-          <Test/>
         </div> ) 
       }
      </div>
