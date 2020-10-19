@@ -6,19 +6,6 @@
     flex-wrap: wrap;
 }
 
-.paperContainer{
-
-}
-
-.typo1{
-    color: greenyellow;
-}
-.typo2{
-    color: hotpink;
-}
-.typo3{
-    color: rgb(240, 236, 14);
-}
 
 .paper{
     width: 290px;
