@@ -76,7 +76,7 @@ class Test extends Component {
             }
         }
         this.setState({posts:stdata})
-        console.log(stdata)
+        // console.log(stdata)
         var states=[]
         var info1=[]
         var info2=[]
@@ -86,21 +86,16 @@ class Test extends Component {
          
             states[i-1]=stdata[i].state
             info1[i-1]=stdata[i].totaltested
-            console.log(stdata[i].state)
+            // console.log(stdata[i].state)
             info2[i-1]=stdata[i].testsperthousand
-            console.log(info2[i-1])
+            // console.log(info2[i-1])
             info3[i-1]=stdata[i].testpositivityrate
-            console.log(info3[i-1])
+            // console.log(info3[i-1])
             info3[i-1].replace('%','')
             info3[i-1]=parseInt(info3[i-1])
             //console.log(info3[i-1])
           
         }
-
-        //console.log(states)
-        //console.log(info1)
-        //console.log(info2)
-        //console.log(info3)
         this.setState({
             chartData:{
                 labels: states,
@@ -164,7 +159,6 @@ class Test extends Component {
         legendPosition:'bottom',
         location:'City'
       }
-    
     render() {
         return (
             <div>
