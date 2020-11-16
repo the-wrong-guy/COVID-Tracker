@@ -5,6 +5,8 @@ import styles from './paperBar.module.css'
 import Red from '@material-ui/core/colors/red';
 import Green from '@material-ui/core/colors/green';
 import Orange from '@material-ui/core/colors/deepOrange';
+import numeral from "numeral";
+
 
 const PaperBar = ({title,data}) => {
     const [TestPerMillon,setTestPerMillon] = useState('')
@@ -29,7 +31,7 @@ const PaperBar = ({title,data}) => {
                 {TestPerMillon==='' || undefined ? '': (
                 <Paper elevation={15} className={styles.paper}>
                     <div><Typography  variant="subtitle1" style={{color:`${Green[500]}`,fontWeight:"700"}}>Tests per million</Typography></div>
-                    <div><Typography variant="subtitle1" style={{color:`${Green[500]}`}}><CountUp  start ={0} end={TestPerMillon} duration = {3.5} separator = ","/></Typography></div>
+                    <div><Typography variant="subtitle1" style={{color:`${Green[500]}`}}>{numeral(TestPerMillon).format("0a")}</Typography></div>
                 </Paper>
                 ) }
             </div>
@@ -37,7 +39,7 @@ const PaperBar = ({title,data}) => {
                 {TotalSamplesTested === '' || undefined ? '' : (   
                 <Paper elevation={15} className={styles.paper}>
                     <div><Typography  variant="subtitle1" style={{color:`${Orange[500]}`,fontWeight:"700"}}>Total samples tested</Typography></div>
-                    <div><Typography variant="subtitle1" style={{color:`${Orange[500]}`}}><CountUp  start ={0} end={TotalSamplesTested} duration = {3.5} separator = ","/></Typography></div>
+                    <div><Typography variant="subtitle1" style={{color:`${Orange[500]}`}}>{numeral(TotalSamplesTested).format("0a")}</Typography></div>
                 </Paper>
                 )} 
             </div>
