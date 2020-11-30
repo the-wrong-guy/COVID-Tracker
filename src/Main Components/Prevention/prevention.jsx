@@ -8,7 +8,7 @@ export default function Prevention() {
     <Typography className={styles.header} variant="h5" color="initial">Prevention</Typography>
       <iframe
         className={styles.iframe}
-        src="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public"
+        src="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html"
         title="COVID_Prevention_Measures"
       />
     </div>

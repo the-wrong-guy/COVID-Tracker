@@ -21,7 +21,7 @@ export default function What() {
         onLoad={()=>setLoading(false)}
       />
       <iframe
-      src="https://www.who.int/health-topics/coronavirus#tab=tab_1"
+      src="http://www.emro.who.int/health-topics/corona-virus/about-covid-19.html"
       title="defination of covid"
       className={styles.iframe2}
       />
