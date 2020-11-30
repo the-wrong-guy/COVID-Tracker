@@ -16,6 +16,7 @@
 }
 
 .iframe{
+    position: relative;
     aspect-ratio: 16/9 !important;
     width: 90vw;
     height: 70vh;
@@ -23,10 +24,13 @@
 .iframe2{
     margin-top: 20px;
     width: 90vw;
-    height: 70vh;
+    height: 100vh;
 }
 
 @media screen and (max-width:600px){
+    .subContainer2{
+        margin-top: 0;
+    }
     .iframe{
         height: max-content;
     }
